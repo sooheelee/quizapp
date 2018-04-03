@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/layoutMargin"
+        android:layout_marginStart="@dimen/layoutMargin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/scrolling_flags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/topMargin"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/flags"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layoutMargin"
+            android:layout_marginTop="@dimen/layoutMargin"
+            android:text="@string/q01"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <RadioGroup
+            android:id="@+id/q01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/answersMargin">
+
+            <RadioButton
+                android:id="@+id/q01_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q01_a"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <RadioButton
+                android:id="@+id/q01_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q01_b"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <RadioButton
+                android:id="@+id/q01_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q01_c"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <RadioButton
+                android:id="@+id/q01_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q01_d"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layoutMargin"
+            android:layout_marginTop="@dimen/layoutMargin"
+            android:text="@string/q02"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <EditText
+            android:id="@+id/q02_text_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:hint="@string/type_here"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:paddingLeft="@dimen/answersMargin"
+            android:paddingRight="@dimen/answersMargin" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:layout_marginTop="@dimen/topMargin"
+            android:contentDescription="@string/q02_content_description"
+            android:src="@drawable/macaroni_and_cheese_appetizer_m" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layoutMargin"
+            android:layout_marginTop="@dimen/layoutMargin"
+            android:text="@string/q03"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <CheckBox
+            android:id="@+id/q03_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:paddingLeft="@dimen/layoutMargin"
+            android:paddingRight="@dimen/layoutMargin"
+            android:text="@string/q03_a"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <CheckBox
+            android:id="@+id/q03_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:paddingLeft="@dimen/layoutMargin"
+            android:paddingRight="@dimen/layoutMargin"
+            android:text="@string/q03_b"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <CheckBox
+            android:id="@+id/q03_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:paddingLeft="@dimen/layoutMargin"
+            android:paddingRight="@dimen/layoutMargin"
+            android:text="@string/q03_c"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <CheckBox
+            android:id="@+id/q03_d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:paddingLeft="@dimen/layoutMargin"
+            android:paddingRight="@dimen/layoutMargin"
+            android:text="@string/q03_d"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <CheckBox
+            android:id="@+id/q03_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:paddingLeft="@dimen/layoutMargin"
+            android:paddingRight="@dimen/layoutMargin"
+            android:text="@string/q03_e"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layoutMargin"
+            android:layout_marginTop="@dimen/layoutMargin"
+            android:text="@string/q04"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q04_a"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q04_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q04_b"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q04_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center"
+                android:textSize="@dimen/smallText" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q04_c"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q04_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q04_d"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q04_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q04_e"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q04_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layoutMargin"
+            android:layout_marginTop="@dimen/layoutMargin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="@string/q05"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <RadioGroup
+            android:id="@+id/q05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin">
+
+            <RadioButton
+                android:id="@+id/q05_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q05_a"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <RadioButton
+                android:id="@+id/q05_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q05_b"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <RadioButton
+                android:id="@+id/q05_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q05_c"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <RadioButton
+                android:id="@+id/q05_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q05_d"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layoutMargin"
+            android:layout_marginTop="@dimen/layoutMargin"
+            android:text="@string/q06"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <EditText
+            android:id="@+id/q06_text_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:hint="@string/type_here"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:paddingLeft="@dimen/answersMargin"
+            android:paddingRight="@dimen/answersMargin" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:layout_marginTop="@dimen/topMargin"
+            android:contentDescription="@string/q06_content_description"
+            android:src="@drawable/senet_board_walters" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layoutMargin"
+            android:layout_marginTop="@dimen/layoutMargin"
+            android:text="@string/q07"
+            android:textColor="@color/dark_blue_gray"
+            android:textSize="@dimen/smallText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q07_a"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q07_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q07_b"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q07_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center"
+                android:textSize="@dimen/smallText" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q07_c"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q07_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q07_d"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q07_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:layout_weight="@integer/countryWeight"
+                android:paddingLeft="@dimen/layoutMargin"
+                android:paddingRight="@dimen/layoutMargin"
+                android:text="@string/q07_e"
+                android:textColor="@color/dark_blue_gray"
+                android:textSize="@dimen/smallText" />
+
+            <EditText
+                android:id="@+id/q07_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:layout_weight="@integer/editTextWeight"
+                android:digits="@string/one_through_five"
+                android:hint="@string/question_mark"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="@integer/oneCharacter"
+                android:paddingLeft="@dimen/answersMargin"
+                android:paddingRight="@dimen/answersMargin"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:layout_width="@dimen/zeroDp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/rightWeight"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/qaMargin"
+            android:layout_marginTop="@dimen/answersMargin"
+            android:backgroundTint="@color/colorAccent"
+            android:onClick="scoreQuiz"
+            android:paddingLeft="@dimen/answersMargin"
+            android:paddingRight="@dimen/answersMargin"
+            android:text="@string/submit_button"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/mediumText" />
+
+    </LinearLayout>
+</ScrollView>
