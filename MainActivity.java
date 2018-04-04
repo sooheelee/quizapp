@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         String[] q07_answers = {"5", "1", "2", "4", "3"};
         numberCorrect = numberCorrect + getRankingAnswer(q07, q07_answers);
 
-        String grade_message = numberCorrect + " " + getString(R.string.out_of) + " " + numberOfQuestions + " " + getString(R.string.correct2);
+        String grade_message = numberCorrect + " " + getString(R.string.out_of) + " " + numberOfQuestions + " " + getString(R.string.correct);
         if (numberCorrect == 7) {
             grade_message = grade_message + getString(R.string.excellent);
         }
