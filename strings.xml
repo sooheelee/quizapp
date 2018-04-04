@@ -43,4 +43,7 @@
     <string name="question_mark"><i>?</i></string>
     <string name="correct">correct</string>
     <string name="one_through_five">12345</string>
+    <string name="out_of"> out of </string>
+    <string name="correct"> correct</string>
+    <string name="excellent">. Excellent!</string>
 </resources>
