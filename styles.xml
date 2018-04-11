@@ -1,0 +1,90 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="RadioGroup">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="RadioButton">
+        <item name="android:textColor">@color/dark_blue_gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/layoutMargin</item>
+        <item name="android:paddingRight">@dimen/layoutMargin</item>
+        <item name="android:textSize">@dimen/smallText</item>
+    </style>
+
+    <style name="Question">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/layoutMargin</item>
+        <item name="android:layout_marginTop">@dimen/layoutMargin</item>
+        <item name="android:textColor">@color/dark_blue_gray</item>
+        <item name="android:textSize">@dimen/smallText</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/answersMargin</item>
+        <item name="android:paddingRight">@dimen/answersMargin</item>
+    </style>
+
+    <style name="FillBlankEditText" parent="EditText">
+        <item name="android:hint">@string/type_here</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:inputType">textCapWords</item>
+    </style>
+
+    <style name="ImageView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/topMargin</item>
+    </style>
+
+    <style name="CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/layoutMargin</item>
+        <item name="android:paddingRight">@dimen/layoutMargin</item>
+        <item name="android:textColor">@color/dark_blue_gray</item>
+        <item name="android:textSize">@dimen/smallText</item>
+    </style>
+
+    <style name="RankLinearLayoutGroup">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="RankAnswerTextView">
+        <item name="android:layout_width">@dimen/zeroDp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">@integer/countryWeight</item>
+        <item name="android:paddingLeft">@dimen/layoutMargin</item>
+        <item name="android:paddingRight">@dimen/layoutMargin</item>
+        <item name="android:textColor">@color/dark_blue_gray</item>
+        <item name="android:textSize">@dimen/smallText</item>
+    </style>
+
+    <style name="RankEditText" parent="EditText">
+        <item name="android:layout_weight">@integer/editTextWeight</item>
+        <item name="android:digits">@string/one_through_five</item>
+        <item name="android:hint">@string/question_mark</item>
+        <item name="android:inputType">number</item>
+        <item name="android:maxLength">@integer/oneCharacter</item>
+    </style>
+
+    <style name="RankImageView">
+        <item name="android:layout_width">@dimen/zeroDp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">@integer/rightWeight</item>
+    </style>
+</resources>
