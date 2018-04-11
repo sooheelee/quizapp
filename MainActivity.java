@@ -47,6 +47,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Listens for click on scrolling flag marquee.
+     * Upon click opens web browser to website with flag emoji codes by country.
+     */
+    public void onFlagClickListener() {
+        TextView scrollingFlags = findViewById(R.id.scrolling_flags);
+        scrollingFlags.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://emojipedia.org/flags/"));
+                startActivity(intent);
+            }
+        });
+    }
+
+    /**
      * Creates menu.
      *
      * @param menu has reset option.
@@ -71,23 +86,9 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.reset) {
             setContentView(layout.activity_main);
             scrollFlags();
+            onFlagClickListener();
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * Listens for click on scrolling flag marquee.
-     * Upon click opens web browser to website with flag emoji codes by country.
-     */
-    public void onFlagClickListener() {
-        TextView scrollingFlags = findViewById(R.id.scrolling_flags);
-        scrollingFlags.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://emojipedia.org/flags/"));
-                startActivity(intent);
-            }
-        });
     }
 
     /**
@@ -99,29 +100,103 @@ public class MainActivity extends AppCompatActivity {
         int numberCorrect = 0;
         int numberOfQuestions = 7;
 
-        numberCorrect = numberCorrect + getRadioAnswer(R.id.q01, "Hawaii");
-        numberCorrect = numberCorrect + getEditTextAnswer(R.id.q02_text_field, "Canada");
+        numberCorrect += getRadioAnswer(R.id.one_answer_q01, "Hawaii");
+        numberCorrect += getEditTextAnswer(R.id.fill_blank_q02_text_field, "Canada");
 
-        int[] q03 = {R.id.q03_a, R.id.q03_b, R.id.q03_c, R.id.q03_d, R.id.q03_e};
-        boolean[] q03_answers = {true, false, false, true, true};
-        numberCorrect = numberCorrect + getCheckBoxAnswer(q03, q03_answers);
+        int[] multiple_answers_q03 = {R.id.multiple_answers_q03_a, R.id.multiple_answers_q03_b, R.id.multiple_answers_q03_c, R.id.multiple_answers_q03_d, R.id.multiple_answers_q03_e};
+        boolean[] multiple_answers_q03_answers = {true, false, false, true, true};
+        numberCorrect += getCheckBoxAnswer(multiple_answers_q03, multiple_answers_q03_answers);
 
-        int[] q04 = {R.id.q04_a, R.id.q04_b, R.id.q04_c, R.id.q04_d, R.id.q04_e};
-        String[] q04_answers = {"5", "1", "4", "3", "2"};
-        numberCorrect = numberCorrect + getRankingAnswer(q04, q04_answers);
+        int[] rank_q04 = {R.id.rank_q04_a, R.id.rank_q04_b, R.id.rank_q04_c, R.id.rank_q04_d, R.id.rank_q04_e};
+        String[] rank_q04_answers = {"5", "1", "4", "3", "2"};
+        numberCorrect += getRankingAnswer(rank_q04, rank_q04_answers);
 
-        numberCorrect = numberCorrect + getRadioAnswer(R.id.q05, "Maine");
-        numberCorrect = numberCorrect + getEditTextAnswer(R.id.q06_text_field, "Egypt");
+        numberCorrect += getRadioAnswer(R.id.one_answer_q05, "Maine");
+        numberCorrect += getEditTextAnswer(R.id.fill_blank_q06_text_field, "Egypt");
 
-        int[] q07 = {R.id.q07_a, R.id.q07_b, R.id.q07_c, R.id.q07_d, R.id.q07_e};
-        String[] q07_answers = {"5", "1", "2", "4", "3"};
-        numberCorrect = numberCorrect + getRankingAnswer(q07, q07_answers);
+        int[] rank_q07 = {R.id.rank_q07_a, R.id.rank_q07_b, R.id.rank_q07_c, R.id.rank_q07_d, R.id.rank_q07_e};
+        String[] rank_q07_answers = {"5", "1", "2", "4", "3"};
+        numberCorrect += getRankingAnswer(rank_q07, rank_q07_answers);
 
         String grade_message = numberCorrect + " " + getString(R.string.out_of) + " " + numberOfQuestions + " " + getString(R.string.correct);
         if (numberCorrect == 7) {
-            grade_message = grade_message + getString(R.string.excellent);
+            grade_message += getString(R.string.excellent);
         }
         toast(grade_message);
+    }
+
+    /**
+     * Scores single answer multiple-choice question.
+     * Returns one point for correct answer and zero for incorrect answer.
+     *
+     * @param viewId of RadioGroup consisting of RadioButtons
+     * @param answer string of correct answer
+     * @return integer point for correct answer
+     */
+    public int getRadioAnswer(int viewId, String answer) {
+        int point = 0;
+        RadioGroup radioGroup = findViewById(viewId);
+        int selectedRadioButtonID = radioGroup.getCheckedRadioButtonId();
+        // Return of -1 indicates no selection
+        if (selectedRadioButtonID == -1) {
+            return point;
+        } else {
+            RadioButton radioButton = radioGroup.findViewById(selectedRadioButtonID);
+            String radioText = radioButton.getText().toString();
+            if (radioText.equalsIgnoreCase(answer)) {
+                point = 1;
+            }
+        }
+        return point;
+    }
+
+    /**
+     * Scores answer typed into textbox.
+     * Returns one point for correct answer and zero for incorrect answer.
+     *
+     * @param viewId of EditText view
+     * @param answer string of correct answer
+     * @return integer point for correct answer
+     */
+    private int getEditTextAnswer(int viewId, String answer) {
+        int point = 0;
+        EditText editText = findViewById(viewId);
+        editText.setCursorVisible(true);
+        final String answerText = editText.getText().toString();
+        if (answerText.equals(answer)) {
+            point = 1;
+        }
+        return point;
+    }
+
+    /**
+     * Scores multiple-answer checkbox question.
+     *
+     * @param viewId        Array of viewIds for each given multiple-choice answer
+     * @param answerBoolean Array of booleans, true or false, for each answer in matching order
+     * @return integer point for correct answer
+     */
+    public int getCheckBoxAnswer(int[] viewId, boolean[] answerBoolean) {
+        int point = 0;
+        if (isCheckedCheckBox(viewId[0]) == (answerBoolean[0])
+                && isCheckedCheckBox(viewId[1]) == (answerBoolean[1])
+                && isCheckedCheckBox(viewId[2]) == (answerBoolean[2])
+                && (isCheckedCheckBox(viewId[3]) == (answerBoolean[3]))
+                && isCheckedCheckBox(viewId[4]) == (answerBoolean[4])) {
+            point = 1;
+        }
+        return point;
+    }
+
+    /**
+     * Returns true or false whether checkbox is checked.
+     *
+     * @param viewId of CheckBox view
+     * @return boolean of whether CheckBox is checked
+     */
+    public boolean isCheckedCheckBox(int viewId) {
+        CheckBox checkBoxStatus = findViewById(viewId);
+        return checkBoxStatus.isChecked();
     }
 
     /**
@@ -156,79 +231,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Scores multiple-answer checkbox question.
-     *
-     * @param viewId        Array of viewIds for each given multiple-choice answer
-     * @param answerBoolean Array of booleans, true or false, for each answer in matching order
-     * @return integer point for correct answer
-     */
-    public int getCheckBoxAnswer(int[] viewId, boolean[] answerBoolean) {
-        int point = 0;
-        if (isCheckedCheckBox(viewId[0]) == (answerBoolean[0])
-                && isCheckedCheckBox(viewId[1]) == (answerBoolean[1])
-                && isCheckedCheckBox(viewId[2]) == (answerBoolean[2])
-                && (isCheckedCheckBox(viewId[3]) == (answerBoolean[3]))
-                && isCheckedCheckBox(viewId[4]) == (answerBoolean[4])) {
-            point = 1;
-        }
-        return point;
-    }
-
-    /**
-     * Returns true or false whether checkbox is checked.
-     *
-     * @param viewId of CheckBox view
-     * @return boolean of whether CheckBox is checked
-     */
-    public boolean isCheckedCheckBox(int viewId) {
-        CheckBox checkBoxStatus = findViewById(viewId);
-        return checkBoxStatus.isChecked();
-    }
-
-    /**
-     * Scores single answer multiple-choice question.
-     * Returns one point for correct answer and zero for incorrect answer.
-     *
-     * @param viewId of RadioGroup consisting of RadioButtons
-     * @param answer string of correct answer
-     * @return integer point for correct answer
-     */
-    public int getRadioAnswer(int viewId, final String answer) {
-        int point = 0;
-        RadioGroup radioGroup = findViewById(viewId);
-        int selectedRadioButtonID = radioGroup.getCheckedRadioButtonId();
-        if (selectedRadioButtonID == -1) {
-            return point;
-        } else {
-            RadioButton radioButton = radioGroup.findViewById(selectedRadioButtonID);
-            String radioText = radioButton.getText().toString();
-            if (radioText.equalsIgnoreCase(answer)) {
-                point = 1;
-            }
-        }
-        return point;
-    }
-
-    /**
-     * Scores answer typed into textbox.
-     * Returns one point for correct answer and zero for incorrect answer.
-     *
-     * @param viewId of EditText view
-     * @param answer string of correct answer
-     * @return integer point for correct answer
-     */
-    private int getEditTextAnswer(int viewId, String answer) {
-        int point = 0;
-        EditText editText = findViewById(viewId);
-        editText.setCursorVisible(true);
-        final String answerText = editText.getText().toString();
-        if (answerText.equals(answer)) {
-            point = 1;
-        }
-        return point;
-    }
-
-    /**
      * Displays long-lasting toast message to screen.
      *
      * @param text string to display
@@ -240,4 +242,3 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 }
-
