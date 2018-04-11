@@ -30,628 +30,328 @@
             android:textSize="@dimen/smallText" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/layoutMargin"
-            android:layout_marginTop="@dimen/layoutMargin"
-            android:text="@string/q01"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
+            style="@style/Question"
+            android:text="@string/one_answer_q01" />
 
         <RadioGroup
-            android:id="@+id/q01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/answersMargin">
-
-            <RadioButton
-                android:id="@+id/q01_a"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q01_a"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-            <RadioButton
-                android:id="@+id/q01_b"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q01_b"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-            <RadioButton
-                android:id="@+id/q01_c"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q01_c"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-            <RadioButton
-                android:id="@+id/q01_d"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q01_d"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/layoutMargin"
-            android:layout_marginTop="@dimen/layoutMargin"
-            android:text="@string/q02"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
-
-        <EditText
-            android:id="@+id/q02_text_field"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/answersMargin"
-            android:hint="@string/type_here"
-            android:imeOptions="actionDone"
-            android:inputType="textCapWords"
-            android:paddingLeft="@dimen/answersMargin"
-            android:paddingRight="@dimen/answersMargin" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/answersMargin"
-            android:layout_marginTop="@dimen/topMargin"
-            android:contentDescription="@string/q02_content_description"
-            android:src="@drawable/macaroni_and_cheese_appetizer_m" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/layoutMargin"
-            android:layout_marginTop="@dimen/layoutMargin"
-            android:text="@string/q03"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
-
-        <CheckBox
-            android:id="@+id/q03_a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/answersMargin"
-            android:paddingLeft="@dimen/layoutMargin"
-            android:paddingRight="@dimen/layoutMargin"
-            android:text="@string/q03_a"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
-
-        <CheckBox
-            android:id="@+id/q03_b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/answersMargin"
-            android:paddingLeft="@dimen/layoutMargin"
-            android:paddingRight="@dimen/layoutMargin"
-            android:text="@string/q03_b"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
-
-        <CheckBox
-            android:id="@+id/q03_c"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/answersMargin"
-            android:paddingLeft="@dimen/layoutMargin"
-            android:paddingRight="@dimen/layoutMargin"
-            android:text="@string/q03_c"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
-
-        <CheckBox
-            android:id="@+id/q03_d"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/answersMargin"
-            android:paddingLeft="@dimen/layoutMargin"
-            android:paddingRight="@dimen/layoutMargin"
-            android:text="@string/q03_d"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
-
-        <CheckBox
-            android:id="@+id/q03_e"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/answersMargin"
-            android:paddingLeft="@dimen/layoutMargin"
-            android:paddingRight="@dimen/layoutMargin"
-            android:text="@string/q03_e"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/layoutMargin"
-            android:layout_marginTop="@dimen/layoutMargin"
-            android:text="@string/q04"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/qaMargin"
-                android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q04_a"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-            <EditText
-                android:id="@+id/q04_a"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
-                android:textAlignment="center" />
-
-            <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
-                tools:ignore="ContentDescription" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/qaMargin"
-                android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q04_b"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-            <EditText
-                android:id="@+id/q04_b"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
-                android:textAlignment="center"
-                android:textSize="@dimen/smallText" />
-
-            <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
-                tools:ignore="ContentDescription" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/qaMargin"
-                android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q04_c"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-            <EditText
-                android:id="@+id/q04_c"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
-                android:textAlignment="center" />
-
-            <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
-                tools:ignore="ContentDescription" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/qaMargin"
-                android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q04_d"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-            <EditText
-                android:id="@+id/q04_d"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
-                android:textAlignment="center" />
-
-            <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
-                tools:ignore="ContentDescription" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/qaMargin"
-                android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q04_e"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-            <EditText
-                android:id="@+id/q04_e"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
-                android:imeOptions="actionDone"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
-                android:textAlignment="center" />
-
-            <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
-                tools:ignore="ContentDescription" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/layoutMargin"
-            android:layout_marginTop="@dimen/layoutMargin"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:text="@string/q05"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
-
-        <RadioGroup
-            android:id="@+id/q05"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/one_answer_q01"
+            style="@style/RadioGroup"
             android:layout_marginStart="@dimen/answersMargin">
 
             <RadioButton
-                android:id="@+id/q05_a"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q05_a"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
+                android:id="@+id/one_answer_q01_a"
+                style="@style/RadioButton"
+                android:text="@string/one_answer_q01_a" />
 
             <RadioButton
-                android:id="@+id/q05_b"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q05_b"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
+                android:id="@+id/one_answer_q01_b"
+                style="@style/RadioButton"
+                android:text="@string/one_answer_q01_b" />
 
             <RadioButton
-                android:id="@+id/q05_c"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q05_c"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
+                android:id="@+id/one_answer_q01_c"
+                style="@style/RadioButton"
+                android:text="@string/one_answer_q01_c" />
 
             <RadioButton
-                android:id="@+id/q05_d"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q05_d"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
+                android:id="@+id/one_answer_q01_d"
+                style="@style/RadioButton"
+                android:text="@string/one_answer_q01_d" />
 
         </RadioGroup>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/layoutMargin"
-            android:layout_marginTop="@dimen/layoutMargin"
-            android:text="@string/q06"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
+            style="@style/Question"
+            android:text="@string/fill_blank_q02" />
 
         <EditText
-            android:id="@+id/q06_text_field"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/answersMargin"
-            android:hint="@string/type_here"
-            android:imeOptions="actionDone"
-            android:inputType="textCapWords"
-            android:paddingLeft="@dimen/answersMargin"
-            android:paddingRight="@dimen/answersMargin" />
+            android:id="@+id/fill_blank_q02_text_field"
+            style="@style/FillBlankEditText"
+            android:layout_marginStart="@dimen/answersMargin" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/ImageView"
             android:layout_marginStart="@dimen/answersMargin"
-            android:layout_marginTop="@dimen/topMargin"
-            android:contentDescription="@string/q06_content_description"
+            android:contentDescription="@string/fill_blank_q02_content_description"
+            android:src="@drawable/macaroni_and_cheese_appetizer_m" />
+
+        <TextView
+            style="@style/Question"
+            android:text="@string/multiple_answers_q03" />
+
+        <CheckBox
+            android:id="@+id/multiple_answers_q03_a"
+            style="@style/CheckBox"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:text="@string/multiple_answers_q03_a" />
+
+        <CheckBox
+            android:id="@+id/multiple_answers_q03_b"
+            style="@style/CheckBox"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:text="@string/multiple_answers_q03_b" />
+
+        <CheckBox
+            android:id="@+id/multiple_answers_q03_c"
+            style="@style/CheckBox"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:text="@string/multiple_answers_q03_c" />
+
+        <CheckBox
+            android:id="@+id/multiple_answers_q03_d"
+            style="@style/CheckBox"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:text="@string/multiple_answers_q03_d" />
+
+        <CheckBox
+            android:id="@+id/multiple_answers_q03_e"
+            style="@style/CheckBox"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:text="@string/multiple_answers_q03_e" />
+
+        <TextView
+            style="@style/Question"
+            android:text="@string/rank_q04" />
+
+        <LinearLayout style="@style/RankLinearLayoutGroup">
+
+            <TextView
+                style="@style/RankAnswerTextView"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:text="@string/rank_q04_a" />
+
+            <EditText
+                android:id="@+id/rank_q04_a"
+                style="@style/RankEditText"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:imeOptions="actionNext"
+                android:textAlignment="center" />
+
+            <ImageView
+                style="@style/RankImageView"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/RankLinearLayoutGroup">
+
+            <TextView
+                style="@style/RankAnswerTextView"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:text="@string/rank_q04_b" />
+
+            <EditText
+                android:id="@+id/rank_q04_b"
+                style="@style/RankEditText"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:imeOptions="actionNext"
+                android:textAlignment="center" />
+
+            <ImageView
+                style="@style/RankImageView"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/RankLinearLayoutGroup">
+
+            <TextView
+                style="@style/RankAnswerTextView"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:text="@string/rank_q04_c" />
+
+            <EditText
+                android:id="@+id/rank_q04_c"
+                style="@style/RankEditText"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:imeOptions="actionNext"
+                android:textAlignment="center" />
+
+            <ImageView
+                style="@style/RankImageView"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/RankLinearLayoutGroup">
+
+            <TextView
+                style="@style/RankAnswerTextView"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:text="@string/rank_q04_d" />
+
+            <EditText
+                android:id="@+id/rank_q04_d"
+                style="@style/RankEditText"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:imeOptions="actionNext"
+                android:textAlignment="center" />
+
+            <ImageView
+                style="@style/RankImageView"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/RankLinearLayoutGroup">
+
+            <TextView
+                style="@style/RankAnswerTextView"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:text="@string/rank_q04_e" />
+
+            <EditText
+                android:id="@+id/rank_q04_e"
+                style="@style/RankEditText"
+                android:layout_marginStart="@dimen/answersMargin"
+                android:imeOptions="actionDone"
+                android:textAlignment="center" />
+
+            <ImageView
+                style="@style/RankImageView"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Question"
+            android:text="@string/one_answer_q05" />
+
+        <RadioGroup
+            android:id="@+id/one_answer_q05"
+            style="@style/RadioGroup"
+            android:layout_marginStart="@dimen/answersMargin">
+
+            <RadioButton
+                android:id="@+id/one_answer_q05_a"
+                style="@style/RadioButton"
+                android:text="@string/one_answer_q05_a" />
+
+            <RadioButton
+                android:id="@+id/one_answer_q05_b"
+                style="@style/RadioButton"
+                android:text="@string/one_answer_q05_b" />
+
+            <RadioButton
+                android:id="@+id/one_answer_q05_c"
+                style="@style/RadioButton"
+                android:text="@string/one_answer_q05_c" />
+
+            <RadioButton
+                android:id="@+id/one_answer_q05_d"
+                style="@style/RadioButton"
+                android:text="@string/one_answer_q05_d" />
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/Question"
+            android:text="@string/fill_blank_q06" />
+
+        <EditText
+            android:id="@+id/fill_blank_q06_text_field"
+            style="@style/FillBlankEditText"
+            android:layout_marginStart="@dimen/answersMargin" />
+
+        <ImageView
+            style="@style/ImageView"
+            android:layout_marginStart="@dimen/answersMargin"
+            android:contentDescription="@string/fill_blank_q06_content_description"
             android:src="@drawable/senet_board_walters" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/layoutMargin"
-            android:layout_marginTop="@dimen/layoutMargin"
-            android:text="@string/q07"
-            android:textColor="@color/dark_blue_gray"
-            android:textSize="@dimen/smallText" />
+            style="@style/Question"
+            android:text="@string/rank_q07" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <LinearLayout style="@style/RankLinearLayoutGroup">
 
             <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
+                style="@style/RankAnswerTextView"
                 android:layout_marginStart="@dimen/qaMargin"
                 android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q07_a"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
+                android:text="@string/rank_q07_a" />
 
             <EditText
-                android:id="@+id/q07_a"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/rank_q07_a"
+                style="@style/RankEditText"
                 android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
                 android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
+                style="@style/RankImageView"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <LinearLayout style="@style/RankLinearLayoutGroup">
 
             <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
+                style="@style/RankAnswerTextView"
                 android:layout_marginStart="@dimen/qaMargin"
-                android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q07_b"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
+                android:text="@string/rank_q07_b" />
 
             <EditText
-                android:id="@+id/q07_b"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/rank_q07_b"
+                style="@style/RankEditText"
                 android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
                 android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
-                android:textAlignment="center"
-                android:textSize="@dimen/smallText" />
-
-            <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
-                tools:ignore="ContentDescription" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/qaMargin"
-                android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q07_c"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
-
-            <EditText
-                android:id="@+id/q07_c"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
-                android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
+                style="@style/RankImageView"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <LinearLayout style="@style/RankLinearLayoutGroup">
 
             <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
+                style="@style/RankAnswerTextView"
                 android:layout_marginStart="@dimen/qaMargin"
                 android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q07_d"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
+                android:text="@string/rank_q07_c" />
 
             <EditText
-                android:id="@+id/q07_d"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/rank_q07_c"
+                style="@style/RankEditText"
                 android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
                 android:imeOptions="actionNext"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
+                style="@style/RankImageView"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <LinearLayout style="@style/RankLinearLayoutGroup">
 
             <TextView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
+                style="@style/RankAnswerTextView"
                 android:layout_marginStart="@dimen/qaMargin"
-                android:layout_weight="@integer/countryWeight"
-                android:paddingLeft="@dimen/layoutMargin"
-                android:paddingRight="@dimen/layoutMargin"
-                android:text="@string/q07_e"
-                android:textColor="@color/dark_blue_gray"
-                android:textSize="@dimen/smallText" />
+                android:text="@string/rank_q07_d" />
 
             <EditText
-                android:id="@+id/q07_e"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/rank_q07_d"
+                style="@style/RankEditText"
                 android:layout_marginStart="@dimen/answersMargin"
-                android:layout_weight="@integer/editTextWeight"
-                android:digits="@string/one_through_five"
-                android:hint="@string/question_mark"
+                android:imeOptions="actionNext"
+                android:textAlignment="center" />
+
+            <ImageView
+                style="@style/RankImageView"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/RankLinearLayoutGroup">
+
+            <TextView
+                style="@style/RankAnswerTextView"
+                android:layout_marginStart="@dimen/qaMargin"
+                android:text="@string/rank_q07_e" />
+
+            <EditText
+                android:id="@+id/rank_q07_e"
+                style="@style/RankEditText"
+                android:layout_marginStart="@dimen/answersMargin"
                 android:imeOptions="actionDone"
-                android:inputType="number"
-                android:maxLength="@integer/oneCharacter"
-                android:paddingLeft="@dimen/answersMargin"
-                android:paddingRight="@dimen/answersMargin"
                 android:textAlignment="center" />
 
             <ImageView
-                android:layout_width="@dimen/zeroDp"
-                android:layout_height="wrap_content"
-                android:layout_weight="@integer/rightWeight"
+                style="@style/RankImageView"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
 
